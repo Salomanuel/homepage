@@ -1,11 +1,11 @@
-<div>
-	<div class="col-md-3">
-		<%= image_tag "avatar_round.png", alt: "Manuel's avatar" %>
+<div class="row">
+	<div class="container col-md-3">
+		<%= image_tag "avatar_round.png", id: "avatar", alt: "Manuel's avatar" %>
 	</div>
-	<div class="col-md-9">
+	<div class="container col-md-7">
 		<h1>Manuel</h1>
 		<p>
-			Web Developer based in Berlin
+			Back End Web Developer based in Berlin
 		</p>
 		<p>
 			Specialized in developing using Ruby on Rails
@@ -14,11 +14,14 @@
 			<%= link_to "Contact", contact_path, class: "btn btn-lg btn-primary" %>
 		</p>
 	</div>
+	<div class="container col-md-2">
+		<h2>to do:</h2>
+		<ul>
+			<li>tests</li>
+			<li>icons</li>
+			<li>overview becomes portfolio</li>
+			<li>small avatar top left</li>
+			<li>flags languages</li>
+		</ul>
+	</div>
 </div>
-to do:
-<ul>
-	<li>tests</li>
-	<li>icons</li>
-	<li>overview becomes portfolio</li>
-	<li>small avatar top left</li>
-</ul>

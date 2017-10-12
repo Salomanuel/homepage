@@ -1,3 +1,13 @@
-<h1>Contact</h1>
+<div class="row">
+	<div class="container col-md-3">
 
-<email>salomanuel@gmail.com</email>
+	</div>
+	<div class="container col-md-7">
+		<h1>Contact</h1>
+				<%= mail_to "salomanuel@gmail.com", class: "btn btn-lg btn-primary" do %>
+			<i class="fa fa-envelope-o fa-fw"></i> <strong>Send me an email</strong>
+		<% end %>
+	</div>
+	<div class="container col-md-2">
+	</div>
+</div>

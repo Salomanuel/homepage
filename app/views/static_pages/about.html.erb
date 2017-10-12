@@ -9,17 +9,25 @@
 	</div>
 	<div class="container col-md-2">
 		<h2>Links</h2>
-		<ul>
-			<li><%= link_to "Github", "https://github.com/Salomanuel" %></li>
-			<li><%= link_to "Facebok", "https://facebook.com/salomanuel" %></li>
+		<ul class="list-unstyled">
+			<li>
+				<%= link_to "https://github.com/Salomanuel", class:"btn btn-default" do %>
+					<i class="fa fa-github fa-3x" aria-hidden="true"></i>
+				<% end %>
+			</li>
+			<li>
+				<%= link_to "https://facebook.com/salomanuel", class:"btn btn-default" do %>
+					<i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
+				<% end %>
+			</li>
 		</ul>
 		<h2>Languages:</h2>
-		<ul>fluent:
+		<ul class="list-unstyled"><strong>fluent:</strong>
 			<li>English</li>
 			<li>Italian</li>
 			<li>Spanish</li>
 		</ul>
-		<ul>intermediate:
+		<ul class="list-unstyled"><strong>intermediate:</strong>
 			<li>French</li>
 		</ul>
 	</div>

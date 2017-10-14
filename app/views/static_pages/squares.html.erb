@@ -34,7 +34,7 @@
     position:relative; 
     /*top:120px;*/
     display:block; 
-    width:550px; 
+    width:450px; 
     margin: 0 auto;
             }
     form    {	width:230px; }
@@ -52,7 +52,36 @@
 <div id='topBar'></div>
 <div id='bottomBar'></div>
 <div class="row">
-	<div class="col-md-7">	  
+	<div class="col-md-5">
+		<h2>About "Stupid Squares"</h2>
+		<p>
+			This was <a href="https://www.theodinproject.com/courses/web-development-101/lessons/javascript-and-jquery">
+			an exercise from the OdinProject</a> that I did to learn the basics of Javascript. 
+		</p>
+		<h2>Project Javascript</h2>
+		<p>
+			You're going to build <strong>a browser version of something between a sketchpad and an Etch-A-Sketch</strong>.
+		</p>
+		<p>
+			<strong>Create your divs using Javascript/jQuery</strong>... don't try making them by hand with copy-pasting!
+		</p>
+		<p>
+			Set up a hover effect so it changes the color of the square when your mouse passes over it, 
+			leaving a (pixelated) trail through your grid like a pen would
+		</p>
+		<p>
+			Add a button to the top of the screen which will clear the current grid 
+			and send the user a popup asking for how many squares per side to make 
+			the new grid. Once entered, the new grid should be generated in the same 
+			total space as before (e.g. 960px wide) and now you've got a new sketch pad. 
+		</p>
+		<p>
+			(Optional): Instead of just changing the color of your grid from black to 
+			white (for example), have each pass through it with the mouse change to 
+			a completely random RGB value
+		</p>
+	</div>
+	<div class="col-md-7 javascriptanza">	  
 		<form>
 		    <input type='button' id='resettone' value='go'>
 		    <input type='number' id='sideLength' 
@@ -121,38 +150,4 @@
 			}
 		</script>
 	</div>
-	<div class="col-md-5">
-		<h2>About "Stupid Squares"</h2>
-		<p>
-			This was <a href="https://www.theodinproject.com/courses/web-development-101/lessons/javascript-and-jquery">
-			an exercise from the OdinProject</a> that I did to learn the basics of Javascript. 
-		</p>
-		<blockquote>
-			<h2>Project Javascript</h2>
-			<p>You're going to build <strong>a browser version of something between a sketchpad and an Etch-A-Sketch</strong>.</p>
-			<p><strong>Create your divs using Javascript/jQuery</strong>... don't try making them by hand with copy-pasting!</p>
-			<p>Set up a hover effect so it changes the color of the square when your mouse passes over it, 
-				leaving a (pixelated) trail through your grid like a pen would
-			</p>
-		</blockquote>
-	</div>
-	<div class="col-md-7">
-		<blockquote>
-			<p>
-					Add a button to the top of the screen which will clear the current grid 
-					and send the user a popup asking for how many squares per side to make 
-					the new grid. Once entered, the new grid should be generated in the same 
-					total space as before (e.g. 960px wide) and now you've got a new sketch pad. 
-				</p>
-			</blockquote>
-		</div>
-		<div class="col-md-5">
-			<blockquote>
-			<p>
-					(Optional): Instead of just changing the color of your grid from black to 
-					white (for example), have each pass through it with the mouse change to 
-					a completely random RGB value
-				</p>
-			</blockquote>
-		</div>
 </div>

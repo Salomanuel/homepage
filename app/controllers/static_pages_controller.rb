@@ -11,4 +11,7 @@ class StaticPagesController < ApplicationController
 
 	def overview
 	end
+
+	def squares
+	end
 end

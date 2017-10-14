@@ -1,0 +1,158 @@
+<head>
+<style>
+	body	    {
+		background-color:#272822; 
+		/*font-size:1em; color:#aaa; */
+    /*max-width:600px;*/
+		/*Sfont-family:Lato; 
+    font-weight:300;*/
+  }
+  /*h3        {
+  	font-weight:300; 
+  	font-size:1.5em; 
+  	margin:5px 0 -10px 20px;
+  }*/
+  /*p {margin-left:20px;}*/
+  #topBar, #bottomBar {
+  	width:100%;; 
+    position:absolute;
+    background-color:#373832; color:#ccc;
+    box-shadow: 0 0 10px red;
+  } 
+  #topBar   {top:0px; left:0px; height:80px}
+  #bottomBar{height:1px;
+            bottom:0px;left:0px;
+            margin:0; padding-bottom:20px;
+            text-align:center;font-size:0.8em;
+            }   
+  a         {text-decoration:none;color:#888}
+	table, form  {
+		color:#c00; 
+		border: 2px solid black; 
+		padding:10px; 
+		background-color:#333530;
+    position:relative; 
+    /*top:120px;*/
+    display:block; 
+    width:550px; 
+    margin: 0 auto;
+            }
+    form    {	width:230px; }
+    input[type="number"] {width:75px; display: inline;}
+    .divTab {width:20px; height:20px;
+             border:1px solid black;background-color:#555;}
+    td      {padding:0; margin:0;}
+
+
+		.jumbotron p { font-size: 1em; }
+
+</style>
+</head>
+
+<div id='topBar'></div>
+<div id='bottomBar'></div>
+<div class="row">
+	<div class="col-md-7">	  
+		<form>
+		    <input type='button' id='resettone' value='go'>
+		    <input type='number' id='sideLength' 
+		    	 value='16' max='36' min='1' 
+		    	class="form-control"> side size
+		</form>
+		<div id='containerTable'></div>		
+		<script>
+			var color=[], j=0, R=0, G=0, B=0;        //color progression
+			                                  
+			for ( j=0,  R=0,  G=0,  B=0;            // BRIGHTER colors
+			      j<10, R<10, G<10, B<10; 
+			      j++,  R++,  G++,  B++){ 
+			  color[j]    = ['#' + R + 0 + 0];
+			  color[j+10] = ['#' + 9 + B + 0];
+			  color[j+30] = ['#' + 0 + 9 + G];
+			  color[j+50] = ['#' + R + 0 + 9];
+			  }                                       
+			for ( j=0,  R=9,  G=9,  B=9;          //DARKER colors
+			      j<10, R>=0,  G>=0,  B>=0; 
+			      j++,  R--,  G--,  B--){ 
+			  color[j+20] = ['#' + R + 9 + 0];
+			  color[j+40] = ['#' + 0 + B + 9];
+			  color[j+60] = ['#' + 9 + 0 + G];
+			  }
+
+			var sideLength  = document.getElementById('sideLength');
+			var resettone   = document.getElementById('resettone');
+			var squares     = document.getElementsByClassName('divTab');
+			resettone.onclick = scancellone;
+
+			tableCreate()
+			function tableCreate(){                                 //DIV CREATOR
+			    var cont    = document.getElementById('containerTable');
+			        tbl  = document.createElement('table'); 
+			        tbl.id = 'tabellone';   
+			    for(var i = 0; i < sideLength.value; i++){
+			        var tr = tbl.insertRow();                       //ROWS
+			        for(var j = 0; j < sideLength.value; j++){      //COLUMNS           
+			                var td = tr.insertCell();               //CELLS
+			                var div = document.createElement('div');
+			                div.className = 'divTab';
+			                td.appendChild(div);    
+			        }
+			    }
+			    cont.appendChild(tbl);                              //INSERT IN DOCUMENT
+			    
+			    for (var i = 0; i < squares.length; i++) {          //HOVER EFFECT
+			        squares[i].onmouseover = function rosso(){
+			            j+=1; if (j>color.length-1) {j=10};
+			            this.style.backgroundColor=color[j];}
+			    }
+			    //j=Math.floor(Math.random()*70);           //random start
+			    var squareSize = Math.round(400/sideLength.value);  //SQUARES SIZE  
+			    for (var j=0; j<squares.length; j++){
+			        squares[j].style.width=squareSize + "px";
+			        squares[j].style.height=squareSize + "px";
+			    }
+			}    
+			function scancellone(){                                 //SCANCELLONE
+			    document.getElementById('tabellone').outerHTML='';
+			    tableCreate()
+			    squares.outerHTML='';
+			    for (var i = 0; i < squares.length; i++) {
+			        squares[i].style.backgroundColor='#555';};
+			}
+		</script>
+	</div>
+	<div class="col-md-5">
+		<h2>About "Stupid Squares"</h2>
+		<p>
+			This was <a href="https://www.theodinproject.com/courses/web-development-101/lessons/javascript-and-jquery">
+			an exercise from the OdinProject</a> that I did to learn the basics of Javascript. 
+		</p>
+		<blockquote>
+			<h2>Project Javascript</h2>
+			<p>You're going to build <strong>a browser version of something between a sketchpad and an Etch-A-Sketch</strong>.</p>
+			<p><strong>Create your divs using Javascript/jQuery</strong>... don't try making them by hand with copy-pasting!</p>
+			<p>Set up a hover effect so it changes the color of the square when your mouse passes over it, 
+				leaving a (pixelated) trail through your grid like a pen would
+			</p>
+		</blockquote>
+	</div>
+	<div class="col-md-7">
+		<blockquote>
+			<p>
+					Add a button to the top of the screen which will clear the current grid 
+					and send the user a popup asking for how many squares per side to make 
+					the new grid. Once entered, the new grid should be generated in the same 
+					total space as before (e.g. 960px wide) and now you've got a new sketch pad. 
+				</p>
+			</blockquote>
+		</div>
+		<div class="col-md-5">
+			<blockquote>
+			<p>
+					(Optional): Instead of just changing the color of your grid from black to 
+					white (for example), have each pass through it with the mouse change to 
+					a completely random RGB value
+				</p>
+			</blockquote>
+		</div>
+</div>

@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
 	def about
 	end
 
-	def overview
+	def portfolio
 	end
 
 	def squares

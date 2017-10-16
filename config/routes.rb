@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 	
 	get '/about', 		to: 'static_pages#about'
 	get '/contact', 	to: 'static_pages#contact'
-	get '/overview',  to: 'static_pages#overview'
+	get '/portfolio',  to: 'static_pages#portfolio'
 	get '/squares',   to: 'static_pages#squares'
 end

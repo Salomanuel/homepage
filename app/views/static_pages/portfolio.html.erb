@@ -4,32 +4,49 @@
 </div>
 
 <div class="row">
-<div class="container col-md-3">
-	<p>
-		Here is my portfolio. Every project has an "About" page where it explains 
-		the purposes of the exercise and the methods I used to achieve them.
-	</p>
-</div>
-<div class="container col-md-6">
-  <div id="Carousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" class="active" data-slide-to="0"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-      	<%= link_to(image_tag("saloflights.png", 		class:"d-block w-100", alt:"Saloflights screenshot"), "https://manuel-flight-booker.herokuapp.com") %>
-      </div>
-      <div class="item">
-      	<%= link_to(image_tag("sample_app.png",  		class:"d-block w-100", alt:"Sample App screenshot"),  "https://manuel-sample-app.herokuapp.com/") %>
-      </div>
-      <div class="item">
-      	<%= link_to(image_tag("stupid_squares.png", class:"d-block w-100", alt: "Stupid Squares screenshot"), squares_path) %>
-      </div>
-    </div>
-  </div>
-</div>
+	<div class="container col-md-3">
+		<p>
+			Here is my portfolio. Every project has an "About" page where it explains 
+			the purposes of the exercise and the methods I used to achieve them.
+		</p>
+	</div>
+	<div class="container col-md-6">
+	  <div id="Carousel" class="carousel slide" data-ride="carousel">
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+	      <li data-target="#Carousel" data-slide-to="0" class="active" ></li>
+	      <li data-target="#Carousel" data-slide-to="1"></li>
+	      <li data-target="#Carousel" data-slide-to="2"></li>
+	    </ol>
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner">
+	      <div class="item active">
+	      	<%= link_to(image_tag("saloflights.png", 		class:"d-block w-100", alt:"Saloflights screenshot"), "https://manuel-flight-booker.herokuapp.com") %>
+	      	<div class="carousel-caption d-none d-md-block">
+	      		<h3>Saloflights</h3>
+	      	</div>
+	      </div>
+	      <div class="item">
+	      	<%= link_to(image_tag("sample_app.png",  		class:"d-block w-100", alt:"Sample App screenshot"),  "https://manuel-sample-app.herokuapp.com/") %>
+	      	<div class="carousel-caption d-none d-md-block">
+	      		<h3>Sample App</h3>
+	      	</div>
+	      </div>
+	      <div class="item">
+	      	<%= link_to(image_tag("stupid_squares.png", class:"d-block w-100", alt: "Stupid Squares screenshot"), squares_path) %>
+	      	<div class="carousel-caption d-none d-md-block">
+	      		<h3>Stupid Squares</h3>
+	      	</div>
+	      </div>
+	    </div>
+	    <a class="carousel-control-prev" href="#Carousel" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#Carousel" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+	  </div>
+	</div>
 </div>

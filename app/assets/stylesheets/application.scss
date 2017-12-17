@@ -7259,4 +7259,19 @@ body {
 // INDEX PAGE
 .index { text-align: center }
 
+
+// CAROUSEL
 #Carousel { width: 500px; }
+
+.carousel-caption { 
+    color: black; 
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.carousel-indicators li {
+    background-color: #000;
+}
+
+.carousel-indicators .active {
+    background-color: #337ab7;
+}

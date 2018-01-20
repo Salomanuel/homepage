@@ -1,0 +1,60 @@
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+  </head>
+
+<h1>P5</h1>
+
+<script>
+	function setup() {
+	  createCanvas(400, 400);
+	  var rando = 255;
+	  mic = new p5.AudioIn()
+	  mic.start();
+	}
+
+	function draw() {
+	  background(200,180,180);
+	  
+	  if(mouseIsPressed) print(mouseX);
+	  
+	  var bodyWidth  				 = 200;
+	  var bodyHeight         = 250;
+	  var bodyVerticalOffset = 10;
+	  
+	  strokeWeight(4);
+	  
+	  //body
+	  fill(0,200,0);
+	  rect(bodyWidth/2, bodyVerticalOffset, bodyWidth, bodyHeight, 50);
+	  
+	  // eyes
+	  fill(255)
+	  ellipse(150, 100, 50);
+	  ellipse(270, 100, 50);
+	  
+	  fill(0);
+	  ellipse(150, 100, 25);
+	  ellipse(270, 100, 25);
+	  
+	  fill(255, 213, 0);
+	  if (noise(frameCount*0.05) * 100 < 30 ) {
+	    // left eyelid
+	    ellipse(150, 100, 50);
+	    ellipse(270, 100, 50);
+	  }
+	  
+	  
+		fill(0)
+	  // mouth
+	  
+	  var micLevel = 10
+	  // micLevel = 0.1;
+	  micLevel = mic.getLevel();
+
+	  ellipse(230,200, 20+ micLevel*300, 20 + micLevel*50);
+	}
+
+</script>
+

@@ -14,4 +14,7 @@ class StaticPagesController < ApplicationController
 
 	def squares
 	end
+
+	def kerbal
+	end
 end

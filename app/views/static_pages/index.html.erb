@@ -36,7 +36,11 @@
   </div>
 
   <div class="container col-md-3">
-    <br><br><br><br><br><br>
+    <h2>Contact</h2>
+        <%= mail_to "salomanuel@gmail.com", class: "btn btn-lg btn-primary" do %>
+      <i class="fas fa-envelope"></i> <strong>Send me an email</strong>
+    <% end %>
+
     <h2>IT skillz</h2>
     <ul class="list-unstyled itskillz">
       <li>

@@ -1,84 +1,92 @@
 <div class="row">
   <div class="container col-md-3">
-    <h2>Links</h2>
-    <ul class="list-unstyled list-inline">
-      <li>
-        <%= link_to "https://github.com/Salomanuel", class:"btn btn-default glyph-sample" do %>
-          <i class="fab fa-github-square fa-3x" aria-hidden="true"></i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to "https://www.linkedin.com/in/salomanuel", class:"btn btn-default glyph-sample" do %>
-          <i class="fab fa-linkedin fa-3x" aria-hidden="true"></i>
-        <% end %>
-      </li>
-    </ul>
-    <h2>Languages</h2>
-    <ul class="list-unstyled"><strong>fluent:</strong>
-      <li class="glyph-sample"><%= flag_icon(:gb) %> English</li>
-      <li class="glyph-sample"><%= flag_icon(:it) %> Italian</li>
-      <li class="glyph-sample"><%= flag_icon(:es) %> Spanish</li>
-    </ul>
-    <ul class="list-unstyled"><strong>intermediate:</strong>
-      <li class="glyph-sample"><%= flag_icon(:fr) %> French</li>
-    </ul>
-    <ul class="list-unstyled"><strong>Ich verstehe nur Bahnhof:</strong>
-      <li class="glyph-sample"><%= flag_icon(:de) %> German</li>
-    </ul>
-
+    <div class="row first-row">
+      <h2>Links</h2>
+      <ul class="list-unstyled list-inline">
+        <li>
+          <%= link_to "https://github.com/Salomanuel", class:"btn btn-default glyph-sample" do %>
+            <i class="fab fa-github-square fa-3x" aria-hidden="true"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "https://www.linkedin.com/in/salomanuel", class:"btn btn-default glyph-sample" do %>
+            <i class="fab fa-linkedin fa-3x" aria-hidden="true"></i>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="row second-row">
+      <h2>Languages</h2>
+      <ul class="list-unstyled"><strong>fluent:</strong>
+        <li class="glyph-sample"><%= flag_icon(:gb) %> English</li>
+        <li class="glyph-sample"><%= flag_icon(:it) %> Italian</li>
+        <li class="glyph-sample"><%= flag_icon(:es) %> Spanish</li>
+      </ul>
+      <ul class="list-unstyled"><strong>intermediate:</strong>
+        <li class="glyph-sample"><%= flag_icon(:fr) %> French</li>
+      </ul>
+      <ul class="list-unstyled"><strong>Ich verstehe nur Bahnhof:</strong>
+        <li class="glyph-sample"><%= flag_icon(:de) %> German</li>
+      </ul>
+    </div>
   </div>
+
   <div class="container col-md-6">
     <div class="center-block text-center">
-      <%= image_tag "avatar_round.png", id: "avatar", alt: "Manuel's avatar" %>
       <h1>Manuel</h1>
       <p>Back End Web Developer based in Berlin</p>
+      <%= image_tag "avatar_round.png", id: "avatar", alt: "Manuel's avatar" %>
     </div>
   </div>
 
   <div class="container col-md-3">
-    <h2>Contact</h2>
-        <%= mail_to "salomanuel@gmail.com", class: "btn btn-lg btn-primary" do %>
-      <i class="fas fa-envelope"></i> <strong>Send me an email</strong>
-    <% end %>
+    <div class="row first-row">
+      <h2>Contact</h2>
+          <%= mail_to "salomanuel@gmail.com", class: "btn btn-lg btn-primary" do %>
+        <i class="fas fa-envelope"></i> <strong>Send me an email</strong>
+      <% end %>
+    </div>
 
-    <h2>IT skillz</h2>
-    <ul class="list-unstyled itskillz">
-      <li>
-        <span class="glyph-sample">
-          <i class="icon-ruby"></i>
-          Ruby
-        </span>
-      </li>
-      <li>
-        <span class="glyph-sample">
-          <i class="icon-ruby-on-rails-alt"></i>
-          Ruby on Rails
-        </span>
-      </li>
-      <li>
-        <span class="glyph-sample">
-          <i class="icon-postgres"></i>
-          SQL
-        </span>
-      </li>
-      <li>
-        <span class="glyph-sample">
-          <i class="icon-git"></i>
-          Git
-        </span>
-      </li>
-      <li>
-        <span class="glyph-sample">
-          <i class="icon-html5-alt"></i>
-          HTML
-        </span>
-      </li>
-      <li>
-        <span class="glyph-sample">
-          <i class="icon-css3-alt"></i> 
-          CSS
-        </span>
-      </li>
-    </ul>
+    <div class="row second-row">
+      <h2>IT skillz</h2>
+      <ul class="list-unstyled itskillz">
+        <li>
+          <span class="glyph-sample">
+            <i class="icon-ruby"></i>
+            Ruby
+          </span>
+        </li>
+        <li>
+          <span class="glyph-sample">
+            <i class="icon-ruby-on-rails-alt"></i>
+            Ruby on Rails
+          </span>
+        </li>
+        <li>
+          <span class="glyph-sample">
+            <i class="icon-postgres"></i>
+            SQL
+          </span>
+        </li>
+        <li>
+          <span class="glyph-sample">
+            <i class="icon-git"></i>
+            Git
+          </span>
+        </li>
+        <li>
+          <span class="glyph-sample">
+            <i class="icon-html5-alt"></i>
+            HTML
+          </span>
+        </li>
+        <li>
+          <span class="glyph-sample">
+            <i class="icon-css3-alt"></i> 
+            CSS
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
